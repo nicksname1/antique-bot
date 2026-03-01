@@ -1,0 +1,29 @@
+{
+	"name": "antique",
+	"version": "1.0.0",
+	"description": "A bot that pipes commands and chat from twitch to minecraft server.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon index.js"
+	},
+	"keywords": [
+		"twitch",
+		"minecraft",
+		"mod",
+		"bot",
+		"docker"
+	],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"dotenv": "^17.3.1",
+		"rcon": "^1.1.0",
+		"rcon-client": "^4.2.5",
+		"tmi.js": "^1.8.5",
+		"ws": "^8.19.0"
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.14"
+	}
+}
