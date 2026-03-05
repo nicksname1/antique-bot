@@ -1,0 +1,29 @@
+{
+	"mobs": [
+		"minecraft:zombie",
+		"minecraft:skeleton",
+		"minecraft:creeper",
+		"minecraft:enderman",
+		"minecraft:spider",
+		"minecraft:ghast",
+		"minecraft:witch",
+		"minecraft:phantom",
+		"minecraft:slime",
+		"minecraft:magma_cube",
+		"minecraft:blaze",
+		"minecraft:evoker",
+		"minecraft:vindicator",
+		"minecraft:pillager",
+		"minecraft:wither_skeleton",
+		"minecraft:husk",
+		"minecraft:drowned",
+		"minecraft:stray",
+		"minecraft:ravager",
+		"minecraft:guardian",
+		"minecraft:elder_guardian",
+		"minecraft:silverfish",
+		"minecraft:zombified_piglin",
+		"minecraft:zombie_villager",
+		"minecraft:illusioner"
+	]
+}
