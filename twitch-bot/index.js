@@ -91,7 +91,9 @@ twitchClient.on("message", (channel, tags, message, self) => {
 
 	if (message === "!hostile") {
 		const randomMob = Math.floor(Math.random() * hostileMobs.length)
-		const command = `summon ${hostileMobs[randomMob]} @a ~ ~ ~`
+		const command = `execute as @p at @s run summon ${hostileMobs[randomMob]} ~ ~ ~`
+		rconClient.send(command)
+	}
 
 		rconClient.send(command)
 	}
