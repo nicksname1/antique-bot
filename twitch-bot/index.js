@@ -95,7 +95,79 @@ twitchClient.on("message", (channel, tags, message, self) => {
 		rconClient.send(command)
 	}
 
+	if (message === "!thunder") {
+		const command = `weather thunder`
 		rconClient.send(command)
+	}
+
+	if (message === "!tnt") {
+		const command =
+			"execute as @a at @s run summon minecraft:tnt ~ ~2 ~ {fuse:50}"
+		rconClient.send(command)
+	}
+
+	if (message === "!tough") {
+		const command = "effect give @a minecraft:resistance 15 50 true"
+		rconClient.send(command)
+	}
+
+	if (message === "!lava") {
+		const command = "execute as @a at @s run setblock ~ ~2 ~ minecraft:lava"
+		rconClient.send(command)
+	}
+
+	if (message === "!water") {
+		const command =
+			"execute as @a at @s run setblock ~ ~2 ~ minecraft:water"
+		rconClient.send(command)
+	}
+
+	if (message === "!clearhand") {
+		const command =
+			"item replace entity @a weapon.mainhand with minecraft:air"
+		rconClient.send(command)
+	}
+
+	if (message === "!slowdown") {
+		const command = "effect give @a slowness 15 255 true"
+		rconClient.send(command)
+	}
+
+	if (message === "!night") {
+		const command = "time set midnight"
+	}
+
+	if (message === "!lightning") {
+		const command =
+			"execute as @a at @s run summon minecraft:lightning_bolt ~ ~ ~"
+		rconClient.send(command)
+	}
+
+	if (message === "!teleport") {
+		const randomPosX = Math.floor(Math.random() * 2001 - 1000)
+		const randomPosZ = Math.floor(Math.random() * 2001 - 1000)
+		const command = `execute as @a run tp @s ~${randomPosX} ~ ~${randomPosZ}`
+		rconClient.send(command)
+	}
+
+	if (message === "!totem") {
+		const command =
+			"item replace entity @a weapon.offhand with minecraft:totem_of_undying"
+		rconClient.send(command)
+	}
+
+	if (message === "!clear") {
+		const command = "clear @a"
+		rconClient.send(command)
+	}
+
+	if (message === "!mlg") {
+		const command =
+			"item replace entity @a weapon.mainhand with minecraft:water_bucket"
+		const command1 = "tp @a ~ ~150 ~"
+
+		rconClient.send(command)
+		rconClient.send(command1)
 	}
 })
 
