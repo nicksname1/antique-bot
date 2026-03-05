@@ -27,6 +27,7 @@ rconClient.connect()
 twitchClient.on("connected", () => {
 	try {
 		console.log("Bot is connected to Twitch!")
+		rconClient.send("gamerule sendCommandFeedback false")
 	} catch (error) {
 		console.error(error)
 	}
