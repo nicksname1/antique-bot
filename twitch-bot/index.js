@@ -3,6 +3,7 @@ const tmi = require("tmi.js")
 const {Rcon} = require("rcon-client")
 const lootTable = require("./data/lootTable.json").table
 const effectTable = require("./data/effectTable.json").effects
+const hostileMobs = require("./data/hostileMobs.json").mobs
 
 const twitchConfig = {
 	identity: {
@@ -85,6 +86,13 @@ twitchClient.on("message", (channel, tags, message, self) => {
 	if (message === "!creeper") {
 		const command =
 			"playsound minecraft:entity.creeper.primed @a ~ ~ ~ 1 1 1"
+		rconClient.send(command)
+	}
+
+	if (message === "!hostile") {
+		const randomMob = Math.floor(Math.random() * hostileMobs.length)
+		const command = `summon ${hostileMobs[randomMob]} @a ~ ~ ~`
+
 		rconClient.send(command)
 	}
 })
