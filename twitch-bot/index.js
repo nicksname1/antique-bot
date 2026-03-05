@@ -54,6 +54,39 @@ twitchClient.on("message", (channel, tags, message, self) => {
 		const command = `effect give @a ${effectTable[randomEffect]} 30`
 		rconClient.send(command)
 	}
+
+	if (message === "!heal") {
+		const command = "effect give @a minecraft:instant_health 1 3"
+		rconClient.send(command)
+	}
+
+	if (message === "!damage") {
+		const command = "effect give @a minecraft:instant_damage 1 3"
+		rconClient.send(command)
+	}
+
+	if (message === "!anvil") {
+		const command = "execute as @a at @s run summon minecraft:anvil ~ ~1 ~"
+		rconClient.send(command)
+	}
+
+	if (message === "!title") {
+		const {_command, ...arg} = message.split(" ")
+
+		const mcCommand = `title @a title {"text":"${arg}"}`
+		rconClient.send(mcCommand)
+	}
+
+	if (message === "!givelight") {
+		const command = "setblock @a ~ ~ ~ minecraft:light"
+		rconClient.send(command)
+	}
+
+	if (message === "!creeper") {
+		const command =
+			"playsound minecraft:entity.creeper.primed @a ~ ~ ~ 1 1 1"
+		rconClient.send(command)
+	}
 })
 
 process.on("exit", () => {
