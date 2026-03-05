@@ -13,8 +13,8 @@ const twitchConfig = {
 	channels: [process.env.TWITCH_CHANNEL],
 }
 const rconConfig = {
-	host: "minecraft",
-	port: 25575,
+	host: process.env.RCON_HOST,
+	port: process.env.RCON_PORT,
 	password: process.env.RCON_PASSWORD,
 }
 
