@@ -85,7 +85,7 @@ twitchClient.on("message", (channel, tags, message, self) => {
 
 	if (message === "!creeper") {
 		const command =
-			"playsound minecraft:entity.creeper.primed @a ~ ~ ~ 1 1 1"
+			"playsound minecraft:entity.creeper.primed ambient @a ~ ~ ~ 1 1 1"
 		rconClient.send(command)
 	}
 
