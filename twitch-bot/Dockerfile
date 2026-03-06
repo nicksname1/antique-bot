@@ -2,9 +2,9 @@ FROM node:24
 
 WORKDIR /app
 
-COPY twitch-bot/package.json ./
+COPY ./package.json ./
 RUN npm install
 
-COPY twitch-bot/ ./
+COPY ./ ./
 
 CMD ["npm", "start"]
